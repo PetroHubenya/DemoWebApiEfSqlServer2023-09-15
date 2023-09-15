@@ -18,7 +18,7 @@ namespace WebApi.Controllers
 
         // GET: api/<BoxController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public Task Get()
         {
             return new string[] { "value1", "value2" };
         }
