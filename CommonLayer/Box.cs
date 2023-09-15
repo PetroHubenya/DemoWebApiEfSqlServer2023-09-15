@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CommonLayer
+namespace Models
 {
     public class Box
     {

@@ -18,7 +18,6 @@ builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString(""));
 });
 
-
 //----------------------------------------------------------------
 
 var app = builder.Build();
