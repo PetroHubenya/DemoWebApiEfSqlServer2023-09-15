@@ -18,7 +18,7 @@ namespace WebApi.Controllers
 
         // GET: api/<BoxController>
         [HttpGet]
-        public Task Get()
+        public async Task<ActionResult<List<BoxService>>> GetAsunc()
         {
             return new string[] { "value1", "value2" };
         }

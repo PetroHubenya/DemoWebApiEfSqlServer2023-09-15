@@ -8,7 +8,7 @@ namespace Models.Helpers
 {
     public class BoxHelper
     {
-        public List<Box> Boxes = new List<Box>()
+        private List<Box> Boxes = new List<Box>()
         {
             new Box()
             {
@@ -21,6 +21,12 @@ namespace Models.Helpers
                 Name = "Box2"
             }
         };
+
+        public List<Box> GetBoxes()
+        {
+            return Boxes;
+        }
+        
 
         
     }

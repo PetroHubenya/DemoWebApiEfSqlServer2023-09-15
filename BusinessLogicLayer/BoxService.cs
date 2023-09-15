@@ -1,4 +1,6 @@
 ﻿using DataAccessLayer;
+using Models;
+using Models.Helpers;
 
 namespace BusinessLogicLayer
 {
@@ -6,15 +8,22 @@ namespace BusinessLogicLayer
     {
         private readonly DataContext _context;
 
-        public BoxService(DataContext context)
+        private readonly BoxHelper _boxHelper;
+
+        public BoxService(DataContext context, BoxHelper boxHelper)
         {
             _context = context;
+            _boxHelper = boxHelper;
         }
 
         // CRUD
 
-        // Create
-        public 
+        // Get
+        public async Task<List<Box>> GetAsync()
+        {
+            List<Box> result = _boxHelper.GetBoxes();
+            return result;
+        }
 
     }
 }
