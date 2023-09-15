@@ -1,16 +1,17 @@
 ﻿using DataAccessLayer;
+using Interfaces;
 using Models;
 using Models.Helpers;
 
 namespace BusinessLogicLayer
 {
-    public class BoxService
+    public class BoxService : IBoxService
     {
         private readonly DataContext _context;
 
-        private readonly BoxHelper _boxHelper;
+        private readonly IBoxHelper _boxHelper;
 
-        public BoxService(DataContext context, BoxHelper boxHelper)
+        public BoxService(DataContext context, IBoxHelper boxHelper)
         {
             _context = context;
             _boxHelper = boxHelper;

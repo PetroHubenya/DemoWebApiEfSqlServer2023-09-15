@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Interfaces;
 
 namespace Models.Helpers
 {
-    public class BoxHelper
+    public class BoxHelper : IBoxHelper
     {
         private List<Box> Boxes = new List<Box>()
         {
@@ -26,8 +27,5 @@ namespace Models.Helpers
         {
             return Boxes;
         }
-        
-
-        
     }
 }
